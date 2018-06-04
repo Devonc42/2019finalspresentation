@@ -1,0 +1,29 @@
+<html>
+<body>
+<p>The flag has been encrypted with another cipher</p>
+
+<button onclick="goback();document.getElementById('flag').click()">
+	<a id = "flag" href="/CTF/flag.dat" download="flag"></a>
+Click on me first tho....
+</button>
+<p id="ctf"></p>
+<script>
+function goback() {
+	document.getElementById("ctf").innerHTML = "Now that you have the second key and the flag, you should right click just so you can return to the CTF page cause you might need to solve the text up top to find the flag...";
+}
+</script>
+<SCRIPT LANGUAGE="javascript">
+
+function click() {
+
+if (event.button==2) {
+
+window.location = '/CTF/'
+
+}
+}
+
+document.onmousedown=click
+</script>
+</body>
+</html>

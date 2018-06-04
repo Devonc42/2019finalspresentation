@@ -1,0 +1,31 @@
+<title>coleman</title>
+<html>
+<body>
+<p>key = coleman</p>
+<p>Next place to go to after this is where the 'flag' will be</p>
+<button onclick="goback()">
+Click on me again....
+</button>
+<p id="ctf"></p>
+<script>
+function goback() {
+	document.getElementById("ctf").innerHTML = "Now that you have a key, you should right click just so you can return to the CTF page cause you kinda sorta need to...";
+}
+</script>
+<SCRIPT LANGUAGE="javascript">
+
+function click() {
+
+if (event.button==2) {
+
+window.location = '/CTF/'
+
+}
+}
+
+document.onmousedown=click
+
+
+</script>
+</body>
+</html>

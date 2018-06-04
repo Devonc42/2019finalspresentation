@@ -6,13 +6,7 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
-div {
-	margin: 0;
-	position: absolute;
-	right: 10%;
-	top: 9%;
-}
-div1 {
+table {
 	margin: 0;
 	position: absolute;
 	right: 10%;
@@ -22,22 +16,42 @@ h3 {
 	font-size: small;
 	color: #ABABAB;
 }
-	
+h4 {
+	font-size: large;
+	color: #000;
+}
+div {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 </style>
-<h1>One Fish,*** ****, Blow fish, Blue fish</h1>
-<h2>Hint: Make sure you pay attention to everything here </h2>
-<h3>Also, the "Place(s)" Button is kinda sorta important, scratch that, it's EXTREMELY important</h3>
-<a href="/coleman/aes.dat" download="aes">
-	<img border="0" src="/simpsons.png" alt="Simpsons" width="300" height="300">
+<h1>One Fish,*** ****, Blowfish, Blue fish</h1>
+<h2>Instructions:</h2>
+<h4>	- To navigate through this website, click on the "PROGRESS" button and input directory names there.</h4>
+<h4>	- Keep in mind that there are multiple ciphers being used here...</h4>
+<!--<h3>Also, the "Place(s)" Button is kinda sorta important, scratch that, it's EXTREMELY important</h3>--->
+<a href="/CTF/coleman/aes.dat" download="aes">
+	<img border="0" src="/CTF/simpsons.png" alt="Simpsons" width="300" height="300">
 </a>
 <body>
-<div><table>
+<table>
 	<tr>
 		<td>
-			<button onclick="myFunction()">Second Hint</button>
+			<button onclick="Hint1()">First Hint</button>
 				<script>
-				function myFunction() {
+				function Hint1() {
 					alert("Did you look at the source code and examine EVERYTHING? \n(Like layers and stuff...)");
+				}
+				</script>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<button onclick="Hint2()">Second Hint</button>
+				<script>
+				function Hint2() {
+					alert("coleman");
 				}
 				</script>
 		</td>
@@ -53,7 +67,25 @@ h3 {
 				</script>
 		</td>
 	</tr>
-</table></div>
+</table>
+
+<p id="direct"></p>
+<div style="text-align:center;"><button onclick="redirect()">PROGRESS</button></div>
+	<script>
+	function redirect() {
+		var txt;
+		var name = prompt("Please enter a directory name:", "");
+		if (name == null || name == "") {
+			txt = "User cancelled the prompt.";
+		} 
+		else {
+			document.write('<a href="' + name + '.html">CLICK ME</a>');
+		}
+	document.getElementById("direct").innerHTML = result;
+	document.getElementById("direct").innerHTML = txt;
+	}
+	</script>
+
 </body>
 </html>
 
